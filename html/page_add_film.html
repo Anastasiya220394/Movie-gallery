@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Add film form</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+        <a class="link_home" href="index.html"><img src="../images/minimal-home-icon-web-homepage-260nw-1719939445-removebg-preview.png" alt="Icon of house"></a>
+        <div class = "authorization">
+            <span class="user_name">Admin</span>
+            <a class="link_sign" href="#">Log out</a>
+        </div>  
+    </div>
+</header>
+<form class="form_login" action="#">
+    <div class="container">
+      <p>Пожалуйста, заполните форму, чтобы добавить новый фильм.</p>
+      <hr>     
+      <input class="input_registration" type="text" placeholder="Title" name="title" id="title" minlength="3" required>
+    
+      <input class="input_registration" type="text" placeholder="Overview" name="overview" id="overview" minlength="6" maxlength="150" required>
+     
+      <input class="input_registration" type="text" placeholder="poster_path" name="poster_path" id="poster_path" minlength="6" required>
+       
+      <input class="input_registration" type="number" placeholder="popularity" name="popularity" id="popularity" required>
+
+      <input class="input_registration" type="date" placeholder="release_date" id="release_date" name="release_date" required>
+
+      <p><select class="genres" name="list2" id="list2">
+        <option value ="">genres</option>
+        <option value ="">боевик</option>
+        <option value ="">триллер</option>
+        <option value ="">ужасы</option>
+       </select></p>
+
+       <input type="number" class="input_registration" placeholder="vote_average" id="vote_average" name="vote_average" required>
+
+       <input type="number" class="input_registration" placeholder="vote_count" id="vote_count" name="vote_count" required>
+
+       <input type="checkbox" style=" margin-bottom: 2rem" name="option1" value="a1" checked>Adult
+  
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Add</button>
+        <button type="reset" class="cancelbtn">Clear</button>
+      </div>
+    </div>
+  </form>
+  <script src="../js/page_add_film.js"></script>
+</body>

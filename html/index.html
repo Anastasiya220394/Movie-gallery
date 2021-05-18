@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery of films</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <header>
+                <div class="header">
+                    <a class="link_home" href="index.html"><img src="../images/minimal-home-icon-web-homepage-260nw-1719939445-removebg-preview.png" alt="Icon of house"></a>
+                    <div class = "authorization">
+                        <a class="link_sign" href="#">Sign in/Sign up</a>
+                    </div>
+                </div>  
+            </header>
+            <section class="gallery">
+                <form action="formdata" method="post" name="form1">
+                    <p><select class="selected" name="list1">
+                     <option value ="no_sorted">По умолчанию</option>
+                     <option value ="rating_up">По рейтингу: по возрастанию</option>
+                     <option value ="rating_down">По рейтингу: по убыванию</option>
+                     <option value ="release_up">По дате релиза: по возрастанию</option>
+                     <option value ="release_down">По дате релиза: по убыванию</option>
+                    </select></p>
+                    <img class="add_film_icon" src="../images/117885.png">
+                </form>
+                <ul class="films_list"></ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="pagination">
+          </div>
+    </footer>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form of registration</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+        <a class="link_home" href="index.html"><img src="../images/minimal-home-icon-web-homepage-260nw-1719939445-removebg-preview.png" alt="Icon of house"></a>
+    </div>  
+</header>
+  <form class="form_login" action="#">
+    <div class="container">
+      <h1>Форма регистрации</h1>
+      <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+      <hr>     
+      <input class="input_registration" type="text" placeholder="Name" name="name" id="name" minlength="6" required>
+    
+      <input class="input_registration" type="text" placeholder="Surname" name="surname" id="surname" minlength="6" required>
+     
+      <input class="input_registration" type="password" placeholder="Password" name="psw" id="psw" minlength="6" required>
+       
+      <input class="input_registration" type="password" placeholder="Confirm password" name="psw-repeat" id="psw-repeat" minlength="6" required>
+
+      <input class="input_registration" type="text" placeholder="Email" id="email" name="email" required>
+  
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign up</button>
+        <button type="reset" class="cancelbtn">Clear</button>
+      </div>
+    </div>
+  </form>
+  <script src="../js/registration.js"></script>
+</body>  

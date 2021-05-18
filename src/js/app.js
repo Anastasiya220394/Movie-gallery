@@ -109,7 +109,7 @@ function showMovies(data) {
                 <a href="#" data link>
                 <img class="img_elem" id=${movie.id} src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt= "${movie.title}">
                 </a>
-                <img class="delete_icon" onclick="deleteFilm()" src="../images/delete.png"> 
+                <img class="delete_icon" onclick="deleteFilm()" src="./images/delete.png"> 
                 <h1 class="movie_title">${movie.title}</h1>
                 <p class="vote">${movie.vote_average}</p>
                 <p class="date">${movie.release_date}</p>
@@ -270,7 +270,7 @@ let vote_count = object.vote_count;
             <a href="#" data link>
             <img class="img_elem" src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}">
             </a>
-            <img class="delete_icon" id="aa" src="../images/delete.png"> 
+            <img class="delete_icon" id="aa" src="./images/delete.png"> 
             <h1 class="movie_title">${title}</h1>
             <p class="vote">${vote_average}</p>
             <p class="date">${release_date}</p>

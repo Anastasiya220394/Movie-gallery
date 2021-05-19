@@ -11,19 +11,13 @@ users.user.forEach(user => {
 
   } else if (email.value == user.email && psw.value !== user.psw) {
       alert('введен неверный пароль');  
-      
-  } else if (email.value !== user.email && psw.value == user.psw) {
-  alert('введен неверный email');  
+
+  } else if (email.value !== user.email) {
+  alert('такого пользователя не существует');  
 }
 });
 })
 
-
-/*let admin = JSON.parse(localStorage.getItem('admin'));
-  if(email.value == admin.email && psw.value == admin.password) {
-    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
-  } 
-})*/
 let admin = JSON.parse(localStorage.getItem('user'));
 if (!admin) {
   fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('user', elem2)));

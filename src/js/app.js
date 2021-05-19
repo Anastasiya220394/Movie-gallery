@@ -241,7 +241,43 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 //джсон данные
-fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
+
+
+//fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('user', elem2)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let admin = JSON.parse(localStorage.getItem('admin'));
 if (admin) {

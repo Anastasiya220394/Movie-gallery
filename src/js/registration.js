@@ -17,7 +17,8 @@ let data = {
         surname : surname.value,
         psw : psw.value,
         email : email.value,
-        loggined: true || false
+        loggined: true || false,
+        isAdmin: false
 }
 
 if (password1.value !== password2.value) {

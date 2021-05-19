@@ -11,8 +11,15 @@ users.forEach(user => {
       alert('ERROR.');  
 }
 });
-let admin = JSON.parse(localStorage.getItem('admin'));
+})
+
+
+/*let admin = JSON.parse(localStorage.getItem('admin'));
   if(email.value == admin.email && psw.value == admin.password) {
     localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
   } 
-})
+})*/
+let admin = JSON.parse(localStorage.getItem('user'));
+if (!admin) {
+  fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('user', elem2)));
+}

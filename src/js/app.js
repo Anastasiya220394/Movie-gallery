@@ -262,7 +262,7 @@ if (currentUser.loggined == true && admin.user.isAdmin == true) {
 }
 
 
-/*//добавить фильм (не отображается)
+//добавить фильм (не отображается)
 let object = JSON.parse(localStorage.getItem('film'));
 let title = object.title;
 let list2 = object.list2;
@@ -288,5 +288,3 @@ let vote_count = object.vote_count;
         
   //document.querySelector(".delete_icon").style.display = "inline";
   //console.log(document.querySelector(".delete_icon"));
-
-*/

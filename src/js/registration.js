@@ -9,8 +9,6 @@ let surname = document.querySelector('#surname');
 let psw = document.querySelector('#psw');
 let email = document.querySelector('#email');
 
-
-
 let array = JSON.parse(localStorage.getItem('user'));
 let data = {
         name : name.value,
@@ -22,7 +20,7 @@ let data = {
 }
 
 if (password1.value !== password2.value) {
-        alert('Пароли не совпадают');
+        alert('You entered two different passwords. Please try again.');
         return false;                 
 }
 if (password1.value == '') {
@@ -33,4 +31,4 @@ array.user.push(data)
        
 localStorage.setItem('user', JSON.stringify(array));
 localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
-})      
+})

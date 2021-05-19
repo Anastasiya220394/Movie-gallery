@@ -23,4 +23,4 @@ document.querySelector(".signupbtn").addEventListener('click', (event) => {
     film.push(object);
     localStorage.setItem('film', JSON.stringify(object));
     document.location.href = 'page_add_film.html';
-  })
+})

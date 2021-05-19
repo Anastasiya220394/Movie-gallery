@@ -37,10 +37,10 @@ function showMovies(data) {
                 </div>      
         `;
         filmsList.appendChild(blockFilm); 
-    }  
-        
+        }          
+    }
 }
-}
+
 const parentUserName = document.querySelector('.authorization');
 let currentUser = JSON.parse(localStorage.getItem('loginInfo'));
 const btnSign = document.querySelector('.link_sign');
@@ -50,11 +50,9 @@ if (!currentUser) {
       loggined: false,
       email: ''
     }
-    
     localStorage.setItem('loginInfo', JSON.stringify(guest));
-    
     currentUser = guest;
-    }
+}
 if (currentUser.loggined == true) {
         filmsList.innerHTML = `
         <input type="number" class="vote_user" placeholder="vote(rating)">
@@ -70,6 +68,5 @@ if (currentUser.loggined == true) {
 }  
 if (currentUser.email == 'anonim22@icloud.com') {
     document.querySelector('.vote_user').style.display = "none";
-    
-} 
 
+}

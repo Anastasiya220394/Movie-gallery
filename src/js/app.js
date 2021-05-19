@@ -15,7 +15,6 @@ async function getMovies(page) {
     return data.results
     
 }
-
 getMovies(1).then(showMovies);
 
 
@@ -98,7 +97,6 @@ content = [startElement(),prevElement(), ...content, nextElement(), endElement()
 content.forEach(x => pagination.appendChild(x));
 
 
-
 // создание блока с фильмом
 function showMovies(data) {
     moviesEl.innerHTML = '';
@@ -115,11 +113,10 @@ function showMovies(data) {
         `;
         
         moviesEl.appendChild(movieEl);  
-      })
-      
+      })    
 }
 
-
+// получение id фильма для отображения на странице с описанием фильма
 document.querySelector('.films_list').addEventListener('click', function(event) {
   
   let filmId = event.target.id;
@@ -187,11 +184,7 @@ selectElement.addEventListener('change', (e) => {
 })
 
 
-
-
-// проверка пользователя на авторизацию
-
-
+// проверка пользователя на авторизацию/админ
 
 const parentUserName = document.querySelector('.authorization');
 let currentUser = JSON.parse(localStorage.getItem('loginInfo'));
@@ -249,7 +242,7 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 //добавить фильм (не отображается)
-let object = JSON.parse(localStorage.getItem('film'));
+/*let object = JSON.parse(localStorage.getItem('film'));
 let title = object.title;
 let list2 = object.list2;
 let overview = object.overview;
@@ -270,7 +263,4 @@ let vote_count = object.vote_count;
             <p class="vote">${vote_average}</p>
             <p class="date">${release_date}</p>
 `;
-  moviesEl.appendChild(li); 
-        
-  //document.querySelector(".delete_icon").style.display = "inline";
-  //console.log(document.querySelector(".delete_icon"));
+  moviesEl.appendChild(li); */

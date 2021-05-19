@@ -1,7 +1,8 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     max-width: 1920px;
-    background: white;
+    background: whitesmoke;
+   
 }
 
 strong {
@@ -23,7 +24,7 @@ button {
 .header {
     display: flex;
     justify-content: space-between;
-    background: #6c757d;
+    background: #808080;
     padding: .85rem 0;
 }
 .link_home {

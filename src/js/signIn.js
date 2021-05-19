@@ -7,10 +7,8 @@ let users = JSON.parse(localStorage.getItem('user'));
 users.user.forEach(user => {
   if(email.value == user.email && psw.value == user.psw) {
     localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
-
   } else if (email.value == user.email && psw.value !== user.psw) {
-      alert('введен неверный пароль');  
-
+      alert('You entered an invalid password. Please try again.');  
   }
 });
 })

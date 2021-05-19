@@ -11,9 +11,7 @@ users.user.forEach(user => {
   } else if (email.value == user.email && psw.value !== user.psw) {
       alert('введен неверный пароль');  
 
-  } else if (email.value !== user.email) {
-      alert('такого пользователя не существует');  
-}
+  }
 });
 })
 

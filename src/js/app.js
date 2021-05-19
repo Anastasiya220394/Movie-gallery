@@ -243,7 +243,7 @@ if (btnSign.innerHTML == 'Log Out') {
 //админ
 
 let admin = JSON.parse(localStorage.getItem('user'));
-if (currentUser.loggined == true && admin.user.isAdmin == true) {
+if (currentUser.email = 'anonim22@icloud.com') {
   document.querySelector(".add_film_icon").style.display = "inline";
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';

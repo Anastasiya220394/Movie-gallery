@@ -14,3 +14,14 @@ users.forEach(user => {
 }
 });
 })
+
+let admin = JSON.parse(localStorage.getItem('admin'));
+admin.forEach(user => {
+  if(email.value == user.email && psw.value == user.password) {
+
+    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
+
+  }else {
+      alert('ERROR.');
+}
+});

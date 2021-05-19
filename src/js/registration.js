@@ -11,7 +11,7 @@ let email = document.querySelector('#email');
 
 
 
-let array = JSON.parse(localStorage.getItem('user')) || [];
+let array = JSON.parse(localStorage.getItem('user'));
 let data = {
         name : name.value,
         surname : surname.value,
@@ -29,7 +29,7 @@ if (password1.value == '') {
         return false;
 }
 
-array.push(data);
+array.user.push(data)
        
 localStorage.setItem('user', JSON.stringify(array));
 localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));

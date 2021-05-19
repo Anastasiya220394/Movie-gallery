@@ -42,7 +42,7 @@ button {
 
 .link_sign {
     text-decoration: none;
-    display: inline-block; /* Строчно-блочный элемент */
+    display: inline-block;
     background-color: transparent;
     color: #f8f9fa;
     border: 1px solid #f8f9fa;

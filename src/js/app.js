@@ -242,16 +242,16 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 //джсон данные
-//fetch('./src/dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
+fetch('./src/dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
 
 let admin = JSON.parse(localStorage.getItem('admin'));
-//if (currentUser == 'admin') {
+if (currentUser == admin) {
   document.querySelector(".add_film_icon").style.display = "inline";
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';
   })
-//}
-//console.log(document.querySelector("#aa"))
+}
+
 
 //добавить фильм (не отображается)
 let object = JSON.parse(localStorage.getItem('film'));

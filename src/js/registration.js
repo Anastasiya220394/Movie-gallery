@@ -28,13 +28,8 @@ if (password1.value == '') {
         return false;
 }
 
-
 array.push(data);
        
 localStorage.setItem('user', JSON.stringify(array));
 localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
-
-
-document.location.href = 'index.html';
-
 })      

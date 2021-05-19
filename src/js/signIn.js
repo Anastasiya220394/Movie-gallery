@@ -16,12 +16,10 @@ users.forEach(user => {
 })
 
 let admin = JSON.parse(localStorage.getItem('admin'));
-admin.forEach(user => {
-  if(email.value == user.email && psw.value == user.password) {
+  if(email.value == admin.email && psw.value == admin.password) {
 
     localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
 
-  }else {
+  } else {
       alert('ERROR.');
 }
-});

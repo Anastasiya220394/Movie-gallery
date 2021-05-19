@@ -242,7 +242,7 @@ if (btnSign.innerHTML == 'Log Out') {
 
 //джсон данные
 
-let admin = JSON.parse(localStorage.getItem('user'));
+/*let admin = JSON.parse(localStorage.getItem('user'));
 if (user.isAdmin == true) {
   const spanElem = document.createElement('span');
   spanElem.classList.add('user_name');
@@ -295,3 +295,4 @@ let vote_count = object.vote_count;
   //console.log(document.querySelector(".delete_icon"));
 
 
+*/

@@ -242,47 +242,8 @@ if (btnSign.innerHTML == 'Log Out') {
 
 //джсон данные
 
-
-//fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('user', elem2)));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*let admin = JSON.parse(localStorage.getItem('admin'));
-if (admin) {
-  currentUser = admin;
-  localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
+let admin = JSON.parse(localStorage.getItem('user'));
+if (user.isAdmin == true) {
   const spanElem = document.createElement('span');
   spanElem.classList.add('user_name');
   parentUserName.appendChild(spanElem);
@@ -333,4 +294,4 @@ let vote_count = object.vote_count;
   //document.querySelector(".delete_icon").style.display = "inline";
   //console.log(document.querySelector(".delete_icon"));
 
-*/
+

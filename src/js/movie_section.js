@@ -60,7 +60,7 @@ if (currentUser.loggined == true) {
         <input type="number" class="vote_user" placeholder="vote(rating)">
         `;
         let users = JSON.parse(localStorage.getItem('user'));
-        let logginedUser = users.find( user => user.email === currentUser.email);
+        let logginedUser = users.user.find( user => user.email === currentUser.email);
         let userName = logginedUser.name;
         const spanElem = document.createElement('span');
         spanElem.classList.add('user_name');

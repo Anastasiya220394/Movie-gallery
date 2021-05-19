@@ -218,6 +218,12 @@ currentUser = guest;
   parentUserName.appendChild(spanElem);
   btnSign.innerHTML = 'Log Out';
 }
+if (currentUser.email == 'anonim22@icloud.com') {
+  document.querySelector(".add_film_icon").style.display = "inline";
+  document.querySelector(".add_film_icon").addEventListener('click', (event) => {
+    document.location.href = 'page_add_film.html';
+  })
+}
 
 if (btnSign.innerHTML == 'Sign in/Sign up') {
   btnSign.addEventListener('click', (event) => {
@@ -242,24 +248,13 @@ if (btnSign.innerHTML == 'Log Out') {
 
 //админ
 
-let admin = JSON.parse(localStorage.getItem('user'));
+/*let admin = JSON.parse(localStorage.getItem('user'));
 if (currentUser.email = 'anonim22@icloud.com') {
   document.querySelector(".add_film_icon").style.display = "inline";
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';
   })
-  if (btnSign.innerHTML == 'Log Out') {
-    btnSign.addEventListener('click', (event) => {
-      document.location.href = 'index.html';
-      currentUser = {
-      loggined: false,
-      email: ''
-      }
-      localStorage.setItem('loginInfo', JSON.stringify(currentUser));
-      btnSign.innerHTML == 'Sign in/Sign up';
-  })
-  }
-}
+}*/
 
 
 //добавить фильм (не отображается)

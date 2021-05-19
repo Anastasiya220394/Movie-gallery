@@ -240,10 +240,10 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 
-//джсон данные
+//админ
 
-/*let admin = JSON.parse(localStorage.getItem('user'));
-if (user.isAdmin == true) {
+let admin = JSON.parse(localStorage.getItem('user'));
+if (admin.user.isAdmin == true) {
   const spanElem = document.createElement('span');
   spanElem.classList.add('user_name');
   parentUserName.appendChild(spanElem);

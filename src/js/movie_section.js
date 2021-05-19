@@ -67,4 +67,9 @@ if (currentUser.loggined == true) {
         spanElem.innerHTML = userName;
         parentUserName.appendChild(spanElem);
         btnSign.innerHTML = 'Log Out';
-}   
+}  
+if (currentUser.email == 'anonim22@icloud.com') {
+    document.querySelector('.vote_user').style.display = "none";
+    
+} 
+

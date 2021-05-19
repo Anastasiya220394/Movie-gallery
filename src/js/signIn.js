@@ -6,8 +6,8 @@ btnSign.addEventListener('click', (event) => {
 let users = JSON.parse(localStorage.getItem('user'));
 users.user.forEach(user => {
   if(email.value == user.email && psw.value == user.psw) {
-    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
     setTimeout(function(){window.location.href = "index.html"},500)
+    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
 
   } else if (email.value == user.email && psw.value !== user.psw) {
       alert('введен неверный пароль');  

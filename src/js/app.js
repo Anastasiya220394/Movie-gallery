@@ -243,12 +243,7 @@ if (btnSign.innerHTML == 'Log Out') {
 //админ
 
 let admin = JSON.parse(localStorage.getItem('user'));
-if (admin.user.isAdmin == true) {
-  const spanElem = document.createElement('span');
-  spanElem.classList.add('user_name');
-  parentUserName.appendChild(spanElem);
-  spanElem.innerHTML = 'Admin';
-  btnSign.innerHTML = 'Log Out';
+if (currentUser.loggined == true && admin.user.isAdmin == true) {
   document.querySelector(".add_film_icon").style.display = "inline";
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';

@@ -6,20 +6,13 @@ btnSign.addEventListener('click', (event) => {
 let users = JSON.parse(localStorage.getItem('user'));
 users.forEach(user => {
   if(email.value == user.email && psw.value == user.psw) {
-
     localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
-
-  }else {
-      alert('ERROR.');
+  } else {
+      alert('ERROR.');  
 }
 });
-})
-
-JSON.parse(localStorage.getItem('admin'));
+let admin = JSON.parse(localStorage.getItem('admin'));
   if(email.value == admin.email && psw.value == admin.password) {
-
     localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
-
-  } else {
-      alert('ERROR.');
-}
+  } 
+})

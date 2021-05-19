@@ -245,7 +245,7 @@ if (btnSign.innerHTML == 'Log Out') {
 fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
 
 let admin = JSON.parse(localStorage.getItem('admin'));
-if (currentUser == admin) {
+if (admin) {
   const spanElem = document.createElement('span');
   spanElem.innerHTML = 'Admin';
   btnSign.innerHTML = 'Log Out';

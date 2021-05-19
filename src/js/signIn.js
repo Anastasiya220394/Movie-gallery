@@ -13,6 +13,6 @@ users.forEach(user => {
 });
 let admin = JSON.parse(localStorage.getItem('admin'));
   if(email.value == admin.email && psw.value == admin.password) {
-    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
+    localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
   } 
 })

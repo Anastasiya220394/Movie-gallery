@@ -12,7 +12,7 @@ users.user.forEach(user => {
       alert('введен неверный пароль');  
 
   } else if (email.value !== user.email) {
-  alert('такого пользователя не существует');  
+      alert('такого пользователя не существует');  
 }
 });
 })

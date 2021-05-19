@@ -318,12 +318,10 @@ form {
   }
 
   .delete_icon {
-    width: 20px;
+    width: 200px;
     cursor: pointer;
     position: absolute;
     top: 0px;
-    
-    
   }
   .add_film_icon {
     width: 30px;

@@ -109,7 +109,6 @@ function showMovies(data) {
                 <a href="#" data link>
                 <img class="img_elem" id=${movie.id} src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt= "${movie.title}">
                 </a>
-                <img class="delete_icon" onclick="deleteFilm()" src="./images/delete.png"> 
                 <h1 class="movie_title">${movie.title}</h1>
                 <p class="vote">${movie.vote_average}</p>
                 <p class="date">${movie.release_date}</p>
@@ -129,8 +128,7 @@ document.querySelector('.films_list').addEventListener('click', function(event) 
  if (className === 'img_elem') {
   sessionStorage.setItem('tempValue', filmId)
   document.location.href = 'movie_section.html';
-  } 
-  
+  }
 });
 
 
@@ -220,8 +218,12 @@ currentUser = guest;
 }
 if (currentUser.email == 'anonim22@icloud.com') {
   document.querySelector(".add_film_icon").style.display = "inline";
+  let img = document.createElement('img');
+  img.src = './images/delete.png';
+  img.classList.add('delete_icon');
+  moviesEl.appendChild(img);
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
-    document.location.href = 'page_add_film.html';
+  document.location.href = 'page_add_film.html';
   })
 }
 
@@ -244,17 +246,6 @@ if (btnSign.innerHTML == 'Log Out') {
 })
 }
 
-
-
-//админ
-
-/*let admin = JSON.parse(localStorage.getItem('user'));
-if (currentUser.email = 'anonim22@icloud.com') {
-  document.querySelector(".add_film_icon").style.display = "inline";
-  document.querySelector(".add_film_icon").addEventListener('click', (event) => {
-    document.location.href = 'page_add_film.html';
-  })
-}*/
 
 
 //добавить фильм (не отображается)

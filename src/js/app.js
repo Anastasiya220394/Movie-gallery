@@ -240,17 +240,17 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 
-
 //джсон данные
 fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
 
 let admin = JSON.parse(localStorage.getItem('admin'));
+currentUser = admin;
 if (admin) {
   const spanElem = document.createElement('span');
+  spanElem.classList.add('user_name');
   parentUserName.appendChild(spanElem);
   spanElem.innerHTML = 'Admin';
   btnSign.innerHTML = 'Log Out';
-  //localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
   document.querySelector(".add_film_icon").style.display = "inline";
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';
@@ -282,6 +282,7 @@ let vote_count = object.vote_count;
 `;
   moviesEl.appendChild(li); 
         
- 
+  //document.querySelector(".delete_icon").style.display = "inline";
+  //console.log(document.querySelector(".delete_icon"));
 
 

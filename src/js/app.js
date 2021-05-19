@@ -246,7 +246,7 @@ fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localSto
 let admin = JSON.parse(localStorage.getItem('admin'));
 if (admin) {
   currentUser = admin;
-  localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: email.value }));
+  localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
   const spanElem = document.createElement('span');
   spanElem.classList.add('user_name');
   parentUserName.appendChild(spanElem);

@@ -244,8 +244,8 @@ if (btnSign.innerHTML == 'Log Out') {
 fetch('./dummy_data/users.json').then(elem => elem.text().then(elem2 => localStorage.setItem('admin', elem2)));
 
 let admin = JSON.parse(localStorage.getItem('admin'));
-currentUser = admin;
 if (admin) {
+  currentUser = admin;
   const spanElem = document.createElement('span');
   spanElem.classList.add('user_name');
   parentUserName.appendChild(spanElem);
@@ -255,6 +255,17 @@ if (admin) {
   document.querySelector(".add_film_icon").addEventListener('click', (event) => {
     document.location.href = 'page_add_film.html';
   })
+  if (btnSign.innerHTML == 'Log Out') {
+    btnSign.addEventListener('click', (event) => {
+      document.location.href = 'index.html';
+      currentUser = {
+      loggined: false,
+      email: ''
+      }
+      localStorage.setItem('loginInfo', JSON.stringify(currentUser));
+      btnSign.innerHTML == 'Sign in/Sign up';
+  })
+  }
 }
 
 

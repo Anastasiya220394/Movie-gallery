@@ -358,8 +358,11 @@ form {
   }
 
   .delete_icon2 {
-
+    width: 25px;
+    margin: 20px 15px 0px 10px;
+    cursor: pointer;
   }
   .red_icon {
-    
+    width: 25px;
+    cursor: pointer;
   }

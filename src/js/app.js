@@ -279,7 +279,7 @@ if (btnSign.innerHTML == 'Log Out') {
 
 
 
-let admin = JSON.parse(localStorage.getItem('admin'));
+/*let admin = JSON.parse(localStorage.getItem('admin'));
 if (admin) {
   currentUser = admin;
   localStorage.setItem('loginInfo', JSON.stringify({ loggined: true, email: admin.email }));
@@ -333,4 +333,4 @@ let vote_count = object.vote_count;
   //document.querySelector(".delete_icon").style.display = "inline";
   //console.log(document.querySelector(".delete_icon"));
 
-
+*/
